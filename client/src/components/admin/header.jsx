@@ -3,7 +3,7 @@
 
 function AdminHeader() {
     return (
-        <div className="text-black">admin header</div>
+        <div className=" ">admin header</div>
     );
 }
 

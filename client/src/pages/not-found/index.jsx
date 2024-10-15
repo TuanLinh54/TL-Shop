@@ -3,7 +3,7 @@
 
 function NotFound() {
     return (
-        <div className="text-black">page does not exist</div>
+        <div className=" ">page does not exist</div>
     );
 }
 

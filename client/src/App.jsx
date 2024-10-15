@@ -23,7 +23,7 @@ function App() {
   const user = null;
 
   return (
-    <div className="flex flex-col overflow-hidden bg-white">
+    <div className="flex flex-col overflow-hidden">
 
       <Routes>
         <Route path="/auth" element={

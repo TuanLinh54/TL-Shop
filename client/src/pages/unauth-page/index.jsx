@@ -3,7 +3,7 @@
 
 function UnAuthPage() {
     return (
-        <h1 className="text-black">You dont have access to view this page</h1>
+        <h1 className=" ">You dont have access to view this page</h1>
     );
 }
 
