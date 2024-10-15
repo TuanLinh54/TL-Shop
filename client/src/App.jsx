@@ -1,26 +1,37 @@
-import { Route, Routes } from "react-router-dom"
-import AuthLayout from "./components/auth/layout"
-import AuthLogin from "./pages/auth/login"
-import AuthRegister from "./pages/auth/register"
-import "./App.css"
-import AdminLayout from "./components/admin/layout"
-import AdminDashBoard from "./pages/admin/dashboard"
-import AdminProducts from "./pages/admin/products"
-import AdminOrders from "./pages/admin/orders"
-import AdminFeatures from "./pages/admin/features"
-import ShoppingLayout from "./components/shopping/layout"
-import NotFound from "./pages/not-found"
-import ShoppingHome from "./pages/shopping-view/home"
-import ShoppingListing from "./pages/shopping-view/listing"
-import ShoppingCheckout from "./pages/shopping-view/checkout"
-import ShoppingAccount from "./pages/shopping-view/account"
-import CheckAuth from "./components/common/check-auth"
-import UnAuthPage from "./pages/unauth-page"
+import { Route, Routes } from "react-router-dom";
+import AuthLayout from "./components/auth/layout";
+import AuthLogin from "./pages/auth/login";
+import AuthRegister from "./pages/auth/register";
+import "./App.css";
+import AdminLayout from "./components/admin/layout";
+import AdminDashBoard from "./pages/admin/dashboard";
+import AdminProducts from "./pages/admin/products";
+import AdminOrders from "./pages/admin/orders";
+import AdminFeatures from "./pages/admin/features";
+import ShoppingLayout from "./components/shopping/layout";
+import NotFound from "./pages/not-found";
+import ShoppingHome from "./pages/shopping-view/home";
+import ShoppingListing from "./pages/shopping-view/listing";
+import ShoppingCheckout from "./pages/shopping-view/checkout";
+import ShoppingAccount from "./pages/shopping-view/account";
+import CheckAuth from "./components/common/check-auth";
+import UnAuthPage from "./pages/unauth-page";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { checkAuth } from "./store/auth-slice";
+import { Skeleton } from "@/components/ui/skeleton";
+
 
 function App() {
 
-  const isAuthenticated = false;
-  const user = null;
+  const { user, isAuthenticated, isLoading } = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(checkAuth());
+  }, [checkAuth]);
+
+  if (isLoading) return <Skeleton className="w-[800] bg-black h-[600px]" />
 
   return (
     <div className="flex flex-col overflow-hidden">
