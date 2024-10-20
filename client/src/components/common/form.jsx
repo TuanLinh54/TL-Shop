@@ -6,7 +6,7 @@ import { Textarea } from "../ui/textarea";
 
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
-function CommonForm({ formControls, formData, setFormData, onSubmit, buttonText }) {
+function CommonForm({ formControls, formData, setFormData, onSubmit, buttonText, isBtnDisabled }) {
 
     function renderInputsByComponentType(getControlItem) {
         let element = null;
@@ -97,6 +97,7 @@ function CommonForm({ formControls, formData, setFormData, onSubmit, buttonText 
         <form onSubmit={onSubmit}>
             <div className="flex flex-col gap-3">
                 {
+                    // eslint-disable-next-line react/prop-types
                     formControls.map((controlItem) => (<div className="grid w-full gap-1.5" key={controlItem.name}>
                         <Label className="mb-1">{controlItem.label}</Label>
                         {
@@ -106,7 +107,9 @@ function CommonForm({ formControls, formData, setFormData, onSubmit, buttonText 
                     ))
                 }
             </div>
-            <Button type="submit" className='mt-2 w-full text-white bg-black rounded' >{buttonText || 'Submit'}</Button>
+            <Button disabled={isBtnDisabled} type="submit" className='mt-2 w-full text-white bg-black rounded' >
+                {buttonText || 'Submit'}
+            </Button>
         </form>
     );
 }
