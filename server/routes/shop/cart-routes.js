@@ -2,7 +2,7 @@ const express = require('express');
 
 const {
     addToCart,
-    fetchCartItem,
+    fetchCartItems,
     deleteCartItem,
     updateCartItemQty,
 } = require('../../controllers/shop/cart-controller');
@@ -10,7 +10,7 @@ const {
 const router = express.Router();
 
 router.post('/add', addToCart);
-router.get('/get/:userId', fetchCartItem);
+router.get('/get/:userId', fetchCartItems);
 router.put('/update-cart', updateCartItemQty);
 router.delete('/:userId/:productId', deleteCartItem);
 
