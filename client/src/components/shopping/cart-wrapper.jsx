@@ -5,7 +5,8 @@ import { Button } from "../ui/button";
 import { SheetContent, SheetHeader, SheetTitle } from "../ui/sheet";
 import UserCartItemsContent from "./cart-items-content";
 
-function UserCartWrapper({ cartItems }) {
+// eslint-disable-next-line no-unused-vars
+function UserCartWrapper({ cartItems, setOpenCartSheet }) {
   const navigate = useNavigate();
 
   const totalCartAmount =
@@ -38,7 +39,10 @@ function UserCartWrapper({ cartItems }) {
         </div>
       </div>
       <Button
-        onClick={() => navigate("/shop/checkout")}
+        onClick={() => {
+          navigate("/shop/checkout");
+          setOpenCartSheet = false;
+        }}
         className="w-full mt-6"
       >
         Checkout
