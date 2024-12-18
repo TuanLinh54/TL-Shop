@@ -1,6 +1,9 @@
 This is my personal project - e-commerce website
+
 Project use ReactJS, Vite, TailwindCss, Shadcn UI, MongoDB and NodeJs to build.
+
 The website includes a homepage and an admin page
+
 There are main functions such as:
   - Register/login
 ![image](https://github.com/user-attachments/assets/6c82c19e-5ac6-4055-b526-e73ef994ed11)
