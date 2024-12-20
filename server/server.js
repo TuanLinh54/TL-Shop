@@ -11,7 +11,7 @@ const shopOrderRouter = require('./routes/shop/order-routes');
 
 //Database
 mongoose.connect(
-    'mongodb+srv://tetto05042002:Tuanlinh542@tl-shop.f9lkm.mongodb.net/'
+    'mongodb+srv://<db_password>:Tuanlinh542@tl-shop.f9lkm.mongodb.net/'
 )
     .then(() => console.log("MongoDB connected"))
     .catch((error) => console.log(error));
