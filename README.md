@@ -9,9 +9,6 @@ There are main functions such as:
 ![image](https://github.com/user-attachments/assets/6c82c19e-5ac6-4055-b526-e73ef994ed11)
 ![image](https://github.com/user-attachments/assets/271e6c55-15b2-4b47-8d11-3ed8041dc11d)
 
-  - HomePage
-![image](https://github.com/user-attachments/assets/9bdd38e0-fc69-4da7-8f40-df1b224dbe5e)
-
   - Shopping cart
 
 ![image](https://github.com/user-attachments/assets/b0682ce3-471e-4a68-8f70-ddaf376d99c7)
